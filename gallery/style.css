@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@font-face {
+    font-family: "Astone Nouvea";
+    src: url("./fonts/Astone-Nouvea.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --bg1: #191414;
+    --bg2: #291d1d;
+    --bg3: #553a3a;
+    --bg4: #756161;
+    --tx1: #d2c1c1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px;
+    background: #191010;
+    color: #d2d1c1;
+    font-family: Inter, sans-serif;
+}
+
+h1 {
+    font-family: "Astone Nouvea";
+    font-size: 42px;
+}
+
+#back {
+    margin-bottom: 30px;
+    padding: 10px 16px;
+    background:#d2d1c1;
+    border:1px solid #0a0605;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .2s;
+    color: #221616;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+#back:hover {
+    background: #21262d;
+}
+
+.hidden {
+    display: none;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 160px);
+    gap: 20px;
+}
+
+.folder {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width:160px;
+    height:160px;
+    padding:12px;
+    background:#221616;
+    border:1px solid #0a0605;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.folder:hover {
+    border-color:#8b949e;
+}
+
+.folder .name {
+    margin-top:10px;
+    text-align:center;
+    font-size:14px;
+    color:#d2d1c1;
+}
+
+.icon {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    cursor: pointer;
+}
+
+.icon img {
+    display: block;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: .2s;
+}
+
+.icon:hover img {
+    opacity: .8;
+}
+
+.copy {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    background: rgba(13,17,23,.85);
+    color: #d2d1c1;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.icon:hover .copy {
+    opacity: 1;
+}
+
+.folder-icon {
+    width: 48px;
+}
